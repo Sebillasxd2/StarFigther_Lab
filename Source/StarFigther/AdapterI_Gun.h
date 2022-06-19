@@ -4,16 +4,16 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
-#include "FactoryMethod_Capsulas.generated.h"
+#include "AdapterI_Gun.generated.h"
 
 UCLASS()
-class STARFIGTHER_API AFactoryMethod_Capsulas : public APawn
+class STARFIGTHER_API AAdapterI_Gun : public APawn
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this pawn's properties
-	AFactoryMethod_Capsulas();
+	AAdapterI_Gun();
 
 protected:
 	// Called when the game starts or when spawned
@@ -22,4 +22,8 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	// Called to bind functionality to input
+	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
 };

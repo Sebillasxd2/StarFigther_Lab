@@ -6,6 +6,7 @@
 #include "GeneradorCapsulasEnergia.h"
 #include "NaveAereaJugador.h"
 #include "FactoryMethod_Capsulas.h"
+#include "AdapterI_Gun.h"
 
 AStarFigtherGameModeBase::AStarFigtherGameModeBase()
 {
@@ -65,4 +66,5 @@ void AStarFigtherGameModeBase::BeginPlay()
 	Super::BeginPlay();
 	GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Yellow, FString::Printf(TEXT("Dentro de BeginPlay")));
 	AFactoryMethod_Capsulas* CapsulaFactory = GetWorld()->SpawnActor<AFactoryMethod_Capsulas>(AFactoryMethod_Capsulas::StaticClass());
+	AAdapterI_Gun* Adaptador = GetWorld()->SpawnActor<AAdapterI_Gun>(AAdapterI_Gun::StaticClass());
 }
