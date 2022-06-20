@@ -6,8 +6,6 @@
 #include "GameFramework/Pawn.h"
 #include "Nave.generated.h"
 
-class UStaticMeshComponent;
-
 UCLASS()
 class STARFIGTHER_API ANave : public APawn
 {
@@ -19,9 +17,7 @@ private:
 public:
 	// Sets default values for this pawn's properties
 	ANave();
-
 	
-
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

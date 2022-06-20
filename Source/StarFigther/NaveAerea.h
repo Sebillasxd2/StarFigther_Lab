@@ -13,5 +13,5 @@ UCLASS()
 class STARFIGTHER_API ANaveAerea : public ANave
 {
 	GENERATED_BODY()
-	
+
 };

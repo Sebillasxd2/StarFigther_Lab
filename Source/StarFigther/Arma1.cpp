@@ -6,7 +6,7 @@
 // Sets default values
 AArma1::AArma1()
 {
- 	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 }
@@ -15,7 +15,7 @@ AArma1::AArma1()
 void AArma1::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
 }
 
 // Called every frame
@@ -24,7 +24,6 @@ void AArma1::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 }
-
 void AArma1::SetSlingShot(AActor* SlingShotObj)
 {
 	//Cast the passed Actor and set the Weapon
@@ -36,7 +35,6 @@ void AArma1::SetSlingShot(AActor* SlingShotObj)
 		UE_LOG(LogTemp, Error, TEXT("SetSlingShot(): The Actor is not a	SlingShot!Are you sure that the Actor implements that interface ? "));
 	}
 }
-
 void AArma1::Sling()
 {
 	if (!SlingShot) {
@@ -45,3 +43,4 @@ void AArma1::Sling()
 	//Fire
 	SlingShot->Sling();
 }
+

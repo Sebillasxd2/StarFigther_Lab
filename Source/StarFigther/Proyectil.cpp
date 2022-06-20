@@ -38,7 +38,6 @@ AProyectil::AProyectil()
 	InitialLifeSpan = 3.0f;
 
 }
-
 // Called when the game starts or when spawned
 void AProyectil::BeginPlay()
 {

@@ -2,13 +2,11 @@
 
 
 #include "AdapterI_Gun.h"
-#include "GunAdapter.h"
-#include "Arma1.h"
 
 // Sets default values
 AAdapterI_Gun::AAdapterI_Gun()
 {
- 	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+ 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 }
@@ -20,11 +18,10 @@ void AAdapterI_Gun::BeginPlay()
 	//Spawn the Gun Adapter
 	AGunAdapter* GunAdapter = GetWorld()->SpawnActor<AGunAdapter>(AGunAdapter::StaticClass());
 	//Spawn the Shooter and set the Gun Adapter
-	ArmaX = GetWorld()->SpawnActor<AArmaA>(AArmaA::StaticClass());
+	ArmaX = GetWorld()->SpawnActor<AArma1>(AArma1::StaticClass());
 	ArmaX->SetSlingShot(GunAdapter);
 	//Shoot
 	ArmaX->Sling();
-	
 }
 
 // Called every frame

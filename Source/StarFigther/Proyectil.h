@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Decorator_Main.h"
 #include "Proyectil.generated.h"
 
 UCLASS()
@@ -21,7 +22,7 @@ class STARFIGTHER_API AProyectil : public AActor
 
 	
 public:	
-	// Sets default values for this actor's properties
+
 	AProyectil();
 
 	UFUNCTION()
@@ -31,7 +32,6 @@ public:
 	FORCEINLINE UStaticMeshComponent* GetProjectilMesh() const { return ProjectileMesh; }
 	/** Returns ProjectileMovement subobject **/
 	FORCEINLINE UProjectileMovementComponent* GetProjectilMovement() const { return ProjectileMovement; }
-
 
 protected:
 	// Called when the game starts or when spawned
